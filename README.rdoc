@@ -1,0 +1,57 @@
+= README
+
+== Name
+
+chuparuby
+
+== Description
+
+Ruby bindings for ChupaText
+
+http://groonga.rubyforge.org/
+
+== Dependencies
+
+* ruby >= 1.9.2
+* chupatext >= 1.0.0
+
+== Install
+
+=== Package
+
+This way is recommended.
+
+  # gem install chupatext
+
+=== Self build
+
+For experimental users.
+
+Download chuparuby-X.Y.Z.tar.gz from http://cairographics.org/releases/
+
+Extracting:
+  % tar xvzf chuparuby-X.Y.Z.tar.gz
+
+Compiling:
+  % cd chuparuby-X.Y.Z
+  % ruby extconf.rb    # to check for dependencies and create Makefiles
+  % make               # to compile
+
+  # make install       # to install the ChupaText extension.
+
+== Documents
+
+TODO
+
+== Source
+
+There is the chuparuby repository at GitHub:
+http://github.com/ranguba/chuparuby
+
+== Mailing list
+
+TODO
+
+== Thanks
+
+...

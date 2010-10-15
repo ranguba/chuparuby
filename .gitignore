@@ -1,0 +1,8 @@
+*.so
+*.o
+/test/.test-result/
+/tmp/
+/vendor/
+/pkg/
+/Makefile
+/Makefile.lib
