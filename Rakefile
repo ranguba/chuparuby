@@ -56,8 +56,12 @@ at_exit do
   FileUtils.rm_f(manifest)
 end
 
-ENV["VERSION"] ||= guess_chuparuby_version
 version = ENV["VERSION"]
+if version
+  version = version.dup
+else
+  ENV["VERSION"] = version = guess_chuparuby_version
+end
 project = Hoe.spec('chupatext') do |project|
   project.version = version
   project.rubyforge_name = 'groonga'
