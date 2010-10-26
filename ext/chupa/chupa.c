@@ -21,10 +21,20 @@
 #include <chupatext.h>
 #include <ruby.h>
 
+#ifndef CHUPA_BINDINGS_VERSION
+#define CHUPA_BINDINGS_VERSION "0.0.0"
+#endif
+
 static void
 quit_chupa(void *ptr)
 {
     chupa_quit();
+}
+
+static VALUE
+bindings_version(VALUE klass)
+{
+    return rb_str_new_cstr(CHUPA_BINDINGS_VERSION);
 }
 
 void
@@ -35,6 +45,7 @@ Init_chupa (void)
 
     chupa_init(&address);
     mChupa = rb_path2class("Chupa");
+    rb_define_singleton_method(mChupa, "bindings_version", bindings_version, 0);
     rb_iv_set(mChupa, "quit", Data_Wrap_Struct(0, 0, quit_chupa, (void *)1));
 }
 
