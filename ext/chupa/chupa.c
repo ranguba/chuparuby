@@ -22,7 +22,7 @@
 #include <ruby.h>
 
 static void
-quit_chupa (void)
+quit_chupa(void *ptr)
 {
     chupa_quit();
 }
@@ -31,9 +31,11 @@ void
 Init_chupa (void)
 {
     int address;
+    VALUE mChupa;
 
     chupa_init(&address);
-    atexit(quit_chupa);
+    mChupa = rb_path2class("Chupa");
+    rb_iv_set(mChupa, "quit", Data_Wrap_Struct(0, 0, quit_chupa, (void *)1));
 }
 
 /*
