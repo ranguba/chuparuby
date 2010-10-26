@@ -20,7 +20,7 @@ $LOAD_PATH.unshift(chupa_lib_dir)
 ENV["RUBYLIB"] = "#{chupa_lib_dir}:#{chupa_ext_dir}:#{ENV['RUBYLIB']}"
 
 def guess_chuparuby_version
-  require 'chupatext'
+  require 'chupa'
   Chupa.bindings_version
 end
 
