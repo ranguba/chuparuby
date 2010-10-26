@@ -6,5 +6,6 @@
 /pkg/
 /Makefile
 /Makefile.lib
+/ext/chupa/Makefile
 /ext/chupa/mkmf.log
 /.gdb_history
