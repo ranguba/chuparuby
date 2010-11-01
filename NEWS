@@ -1,14 +1,5 @@
-Release X.Y.Z (XXXX-XX-XX) Mr. Foo <foo@example.com>)
-===========================================================
+= NEWS
 
-Features
------
-  * ...
+== Release 0.4.0 (2010-11-01) - Kouhei Sutou <kou@clear-code.com>
 
-Fixes
------
-  * ...
-
-Thanks
-------
-  * ...
+  * Initial release.
