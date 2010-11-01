@@ -15,4 +15,7 @@
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 # MA  02110-1301  USA
 
-require "chupa.so"
+module Chupa
+  BINDINGS_VERSION = [0, 4, 0]
+  BINDINGS_VERSION_STRING = BINDINGS_VERSION.join(".")
+end

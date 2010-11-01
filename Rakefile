@@ -13,15 +13,15 @@ truncate_base_dir = Proc.new do |x|
   x.gsub(/^#{Regexp.escape(base_dir + File::SEPARATOR)}/o, '')
 end
 
-chupa_ext_dir = File.join(base_dir, 'ext', 'chupa')
-chupa_lib_dir = File.join(base_dir, 'lib')
-$LOAD_PATH.unshift(chupa_ext_dir)
-$LOAD_PATH.unshift(chupa_lib_dir)
-ENV["RUBYLIB"] = "#{chupa_lib_dir}:#{chupa_ext_dir}:#{ENV['RUBYLIB']}"
+chupatext_ext_dir = File.join(base_dir, 'ext', 'chupatext')
+chupatext_lib_dir = File.join(base_dir, 'lib')
+$LOAD_PATH.unshift(chupatext_ext_dir)
+$LOAD_PATH.unshift(chupatext_lib_dir)
+ENV["RUBYLIB"] = "#{chupatext_lib_dir}:#{chupatext_ext_dir}:#{ENV['RUBYLIB']}"
 
 def guess_chuparuby_version
-  require 'chupa'
-  Chupa.bindings_version
+  require 'chupatext/version'
+  Chupa::BINDINGS_VERSION_STRING
 end
 
 manifest = File.join(base_dir, "Manifest.txt")
@@ -79,11 +79,11 @@ project = Hoe.spec('chupatext') do |project|
   project.url = 'http://groonga.rubyforge.org/'
   project.test_globs = []
   project.spec_extras = {
-    :extensions => ['ext/chupa/extconf.rb'],
+    :extensions => ['ext/chupatext/extconf.rb'],
     :require_paths => ['lib'],
     :has_rdoc => false,
   }
-  project.extra_dev_deps << ['pkg-config', '>= 0']
+  project.extra_deps << ['pkg-config', '>= 0']
   platform = ENV["FORCE_PLATFORM"]
   project.spec_extras[:platform] = platform if platform
   news = File.join(base_dir, "NEWS")

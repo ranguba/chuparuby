@@ -22,8 +22,8 @@ checking_for(checking_message("GCC")) do
 end
 
 package = "chupatext"
-module_name = "chupa"
-major, minor, micro = 0, 1, 0
+module_name = "chupatext"
+major, minor, micro = 0, 4, 0
 
 base_dir = Pathname(__FILE__).dirname.parent.parent
 checking_for(checking_message("Win32 OS")) do

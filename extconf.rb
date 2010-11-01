@@ -5,7 +5,7 @@ require 'mkmf'
 require 'rbconfig'
 require 'fileutils'
 
-package_name = "chupa"
+package_name = "chupatext"
 
 base_dir = Pathname(__FILE__).dirname.expand_path
 ext_dir = base_dir + "ext" + package_name
