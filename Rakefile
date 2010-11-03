@@ -85,12 +85,9 @@ project = Hoe.spec('chuparuby') do |project|
   }
   project.extra_deps << ['glib2', '>= 0']
   project.extra_deps << ['nokogiri', '>= 0']
-  platform = ENV["FORCE_PLATFORM"]
-  project.spec_extras[:platform] = platform if platform
   news = File.join(base_dir, "NEWS")
   project.changes = File.read(news).gsub(/\n+^Release(?m:.*)/, '')
   project.description = 'Ruby bindings for ChupaText'
-  project.need_tar = false
   project.remote_rdoc_dir = "doc"
 end
 
