@@ -62,7 +62,7 @@ if version
 else
   ENV["VERSION"] = version = guess_chuparuby_version
 end
-project = Hoe.spec('chupatext') do |project|
+project = Hoe.spec('chuparuby') do |project|
   project.version = version
   project.rubyforge_name = 'groonga'
   authors = File.join(base_dir, "AUTHORS")
@@ -79,7 +79,7 @@ project = Hoe.spec('chupatext') do |project|
   project.url = 'http://groonga.rubyforge.org/'
   project.test_globs = []
   project.spec_extras = {
-    :extensions => ['ext/chupatext/extconf.rb'],
+    :extensions => ['ext/chuparuby/extconf.rb'],
     :require_paths => ['lib'],
     :has_rdoc => false,
   }
