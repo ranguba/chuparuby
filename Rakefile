@@ -79,7 +79,7 @@ project = Hoe.spec('chuparuby') do |project|
   project.url = 'http://groonga.rubyforge.org/'
   project.test_globs = []
   project.spec_extras = {
-    :extensions => ['ext/chuparuby/extconf.rb'],
+    :extensions => ['ext/chupatext/extconf.rb'],
     :require_paths => ['lib'],
     :has_rdoc => false,
   }
