@@ -1,5 +1,9 @@
 = NEWS
 
+== Release 0.5.0 (2010-11-08) - Kouhei Sutou <kou@clear-code.com>
+
+  * Support ChupaText 0.5.0.
+
 == Release 0.4.0 (2010-11-01) - Kouhei Sutou <kou@clear-code.com>
 
   * Initial release.
