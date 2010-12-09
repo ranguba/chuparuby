@@ -85,6 +85,7 @@ project = Hoe.spec('chuparuby') do |project|
   }
   project.extra_deps << ['glib2', '>= 0']
   project.extra_deps << ['nokogiri', '>= 0']
+  project.extra_deps << ['mail', '>= 0']
   news = File.join(base_dir, "NEWS")
   project.changes = File.read(news).gsub(/\n+^Release(?m:.*)/, '')
   project.description = 'Ruby bindings for ChupaText'
