@@ -89,7 +89,7 @@ project = Hoe.spec('chuparuby') do |project|
   news = File.join(base_dir, "NEWS")
   project.changes = File.read(news).gsub(/\n+^Release(?m:.*)/, '')
   project.description = 'Ruby bindings for ChupaText'
-  project.remote_rdoc_dir = "doc"
+  project.remote_rdoc_dir = "ruby-chupatext"
 end
 
 project.spec.dependencies.delete_if {|dependency| dependency.name == "hoe"}
